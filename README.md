@@ -1,5 +1,5 @@
 
-## My Project
+## Autoscaling Kubernetes workloads with KEDA using AMP metrics
 
 This is a Repo for the AWS Blog  for Autoscaling Kubernetes workloads with KEDA using AMP metrics
 
