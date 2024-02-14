@@ -60,7 +60,6 @@ spec:
           value: "downstream1"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: "adot:4317"
-          value: "DUMMY:187kB:42ms"
         - name: DOWNSTREAM
           value: "DUMMY:13kB:2ms"
         imagePullPolicy: Always
