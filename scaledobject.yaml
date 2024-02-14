@@ -20,8 +20,6 @@ spec:
           stabilizationWindowSeconds: 15
   triggers:
     - type: prometheus
-      authenticationRef:
-        name: keda-trigger-auth-aws-credentials
       metadata:
         serverAddress: https://aps-workspaces.$AWS_REGION.amazonaws.com/workspaces/$AMP_WS_ID
         metricName: s0-prometheus

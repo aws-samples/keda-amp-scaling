@@ -6,21 +6,20 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: songinx
+    name: checkout
   pollingInterval:  30
   cooldownPeriod:   300
   fallback:
     failureThreshold: 3
-    replicas: 2
+    replicas: 1
   minReplicaCount: 1        # Optional. Default: 0
   maxReplicaCount: 100       # Optional. Default: 100
   triggers:
     - type: prometheus
       metadata:
-        serverAddress: https://aps-workspaces.us-east-2.amazonaws.com/workspaces/ws-d3284d62-5c77-4c0d-8095-7f752dd585dc
+        serverAddress: https://aps-workspaces.$AWS_REGION.amazonaws.com/workspaces/$AMP_WS_ID
         metricName: requests_rate
         awsRegion: "us-east-2"
         identityOwner: operator
         threshold: '0.25'
-        # Note: query must return a vector/scalar single element response
         query: rate(ho11y_total[30s])
