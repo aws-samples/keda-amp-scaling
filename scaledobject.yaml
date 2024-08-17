@@ -26,4 +26,4 @@ spec:
         awsRegion: ${AWS_REGION}
         threshold: "25"
         query: vector(100)
-        identityOwner: operator
+        identityOwner: pod
